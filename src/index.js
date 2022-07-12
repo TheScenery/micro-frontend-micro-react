@@ -8,7 +8,7 @@ let root = null;
 
 function render(props) {
   const { container } = props;
-  root = ReactDOM.createRoot(container ? container : document.querySelector('#root'));
+  root = ReactDOM.createRoot(container ? container.querySelector('#root') : document.querySelector('#root'));
   root.render(<App />, );
 }
 

@@ -1,7 +1,7 @@
 const { name } = require('./package');
 
 module.exports = {
-  webpack: function(config, env) {
+  webpack: function(config) {
     config.output.library = `${name}-[name]`;
     config.output.libraryTarget = 'umd';
     config.output.chunkLoadingGlobal = `webpackJsonp_${name}`;
